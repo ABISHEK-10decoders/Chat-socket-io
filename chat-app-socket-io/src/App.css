@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.loader {
+  height: 100vh;
+  padding-top: 25rem;
+  background: rgb(223,221,222);
+  background: linear-gradient(90deg, rgba(223,221,222,1) 0%, rgba(238,241,245,1) 100%);
+  align-items: center;
+  /* justify-content:center; */
+  text-align: center;
+ 
+
+}
