@@ -15,17 +15,17 @@ const Login = () => {
                         <h2 style={{ paddingLeft: "300px" }}> Login Page</h2>
                     </div>
                     <form className='container w-80' style={{ paddingTop: '100px' }}>
-                        <div class="mb-3">
-                            <label for="exampleInputName" class="form-label">Enter your Name</label>
-                            <input type="text" class="form-control" id="exampleInputName1" aria-describedby="emailHelp" onChange={(e) => setName(e.target.value)} />
+                        <div className="mb-3">
+                            <label className="form-label">Enter your Name</label>
+                            <input data-testid="input" type="text" className="form-control" id="exampleInputName1" aria-describedby="emailHelp" onChange={(e) => setName(e.target.value)} />
                             {/* <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> */}
                         </div>
-                        <div class="mb-3">
-                            <label for="exampleInputName" class="form-label">Room</label>
-                            <input type="text" class="form-control" id="exampleInputPassword1" onChange={(e) => setRoom(e.target.value)} />
+                        <div className="mb-3">
+                            <label className="form-label">Room</label>
+                            <input type="text" className="form-control" id="exampleInputPassword1" onChange={(e) => setRoom(e.target.value)} />
                         </div>
                         <Link onClick={(e) => (!name || !room) ? e.preventDefault() : null} to={`/chat?name=${name}&room=${room}`}>
-                            <button type="submit" class="btn btn-primary w-100" >Submit</button>
+                            <button type="submit" className="btn btn-primary w-100" >Submit</button>
                         </Link>
                     </form>
                 </div>

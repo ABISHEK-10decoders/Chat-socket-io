@@ -9,6 +9,9 @@ import Paper from '@mui/material/Paper';
 
 const FetchData = () => {
     const [data, setData] = useState([]);
+    // const data = [["1", "Apples"],
+    // ["2", "Oranges"],
+    // ["3", "Apples"],]
     const [show, setShow] = useState(false);
     useEffect(() => {
 
@@ -35,25 +38,25 @@ const FetchData = () => {
                     <TableHead>
                         <TableRow>
                             <TableCell>I D</TableCell>
-                            <TableCell align="right">N A M E</TableCell>
-                            <TableCell align="right">U S E R N A M E</TableCell>
-                            <TableCell align="right">E M A I L </TableCell>
-                            <TableCell align="right">P H O N E  N U M B E R </TableCell>
+                            <TableCell align="right">  F R U I T S</TableCell>
+                            {/* <TableCell align="right">U S E R N A M E</TableCell> */}
+                            {/* <TableCell align="right"> </TableCell> */}
+                            {/* <TableCell align="right">P H O N E  N U M B E R </TableCell> */}
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {data.map((row) => (
+                        {data.map(({ id, username }) => (
                             <TableRow
-                                key={row.id}
+                                key={id}
                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                             >
                                 <TableCell component="th" scope="row">
-                                    {row.id}
+                                    {id}
                                 </TableCell>
-                                <TableCell align="right">{row.name}</TableCell>
-                                <TableCell align="right">{row.username}</TableCell>
-                                <TableCell align="right">{row.email}</TableCell>
-                                <TableCell align="right">{row.phone}</TableCell>
+                                <TableCell align="right">{id}</TableCell>
+                                {/* <TableCell align="right">{row.username}</TableCell> */}
+                                <TableCell align="right">{username}</TableCell>
+                                {/* <TableCell align="right">{row.phone}</TableCell> */}
                             </TableRow>
                         ))}
                     </TableBody>
