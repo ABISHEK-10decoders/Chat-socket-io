@@ -1,8 +1,8 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link, useLocation } from "react-router-dom";
 import './App.css';
 // import Gif from "../src/asscts/Gif"
-// import Chat from "../src/pages/chat/Chat"
+import Chat from "../src/pages/chat/Chat"
 // import Loading from "../src/Loading/Loading"
 import Login from "../src/pages/login/Login"
 import FetchData from './fetch_data/FetchData'
@@ -15,17 +15,24 @@ import FetchData from './fetch_data/FetchData'
 //     { path = "/", element={< Login />}
 //   ])
 // }
+export const displayLocation = () => {
+  const location = useLocation()
+  console.log(location)
+  return <div data-testid="location-display">{location.pathname}</div>
+
+
+}
 
 function App() {
 
   return (
     <div>
       <BrowserRouter>
+        <Link to="/">Login</Link>
+        <Link to="/chat"> Chat</Link>
         <Routes>
-          <Route path="/data" element={<FetchData />} />
           <Route path="/" element={<Login />} />
-
-
+          <Route path="/chat" element={<Chat />} />
         </Routes>
       </BrowserRouter>
     </div>
