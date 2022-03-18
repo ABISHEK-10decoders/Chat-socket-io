@@ -15,13 +15,7 @@ import FetchData from './fetch_data/FetchData'
 //     { path = "/", element={< Login />}
 //   ])
 // }
-export const displayLocation = () => {
-  const location = useLocation()
-  console.log(location)
-  return <div data-testid="location-display">{location.pathname}</div>
 
-
-}
 
 function App() {
 
